@@ -51,7 +51,7 @@ public class Location
 			this.geolookup = geolookup;
 			}
 		}
-	private class Location_
+	public class Location_
 		{
 		@SerializedName("type")
 		@Expose
@@ -242,7 +242,7 @@ public class Location
 			this.nearbyWeatherStations = nearbyWeatherStations;
 			}
 		}
-	private class NearbyWeatherStations
+	public class NearbyWeatherStations
 		{
 		@SerializedName("airport")
 		@Expose
@@ -268,7 +268,7 @@ public class Location
 			this.pws = pws;
 			}
 		}
-	private class Pws
+	public class Pws
 		{
 		@SerializedName("station")
 		@Expose
@@ -320,7 +320,7 @@ public class Location
 			this.features = features;
 			}
 		}
-	private class Station
+	public class Station
 		{
 		@SerializedName("city")
 		@Expose
@@ -390,7 +390,7 @@ public class Location
 			this.lon = lon;
 			}
 		}
-	private class Station_
+	public class Station_
 		{
 		@SerializedName("neighborhood")
 		@Expose
@@ -489,3 +489,16 @@ public class Location
 		this.location = location;
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+

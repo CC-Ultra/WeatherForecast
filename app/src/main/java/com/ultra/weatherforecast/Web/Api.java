@@ -15,8 +15,8 @@ import retrofit2.http.Path;
 public interface Api
 	{
 	@GET("api/{key}/geolookup/q/{lat},{lng}.json")
-	Call<Location> getLocation(@Path("key")String apikey,@Path("lat")float lat,@Path("lng")float lng);
+	Call<Location> getLocation(@Path("key")String apikey,@Path("lat")double lat,@Path("lng")double lng);
 
 	@GET("api/{key}/forecast10day/lang:RU/q/{lat},{lng}.json")
-	Call<Forecast10> get10Forecast(@Path("key")String apikey,@Path("lat")float lat,@Path("lng")float lng);
+	Call<Forecast10> get10Forecast(@Path("key")String apikey,@Path("lat")double lat,@Path("lng")double lng);
 	}

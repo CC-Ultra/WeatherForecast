@@ -19,6 +19,15 @@ public class O
 			public static final String LNG="Lng";
 			public static final String CITY="City";
 			}
+		public static class savedState
+			{
+			public static final String CITY="City";
+			public static final String DATE="Date";
+			public static final String DAY_INFO="Day info";
+			public static final String DAY_PIC="Day pic";
+			public static final String NIGHT_INFO="Night info";
+			public static final String NIGHT_PIC="Night pic";
+			}
 		}
 
 	public static class web

@@ -8,11 +8,13 @@
 	<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Показать погоду"
+			android:textAllCaps="false"
+			android:text="Current Weather"
 			android:id="@+id/btnLocalWeather"/>
 	<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Поиск города"
+			android:textAllCaps="false"
+			android:text="Search Weather"
 			android:id="@+id/btnSearch"/>
 </LinearLayout >

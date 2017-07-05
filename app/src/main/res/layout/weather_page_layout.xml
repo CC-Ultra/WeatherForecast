@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:gravity="center_horizontal"
+		android:orientation="vertical">
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="22sp"
+			android:text="Date"
+			android:id="@+id/date"/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="20sp"
+			android:text="City"
+			android:id="@+id/city"/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:textSize="22sp"
+			android:text="День"/>
+	<ImageView
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:id="@+id/dayPic"/>
+	<TextView
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="day Info"
+			android:gravity="center_horizontal"
+			android:id="@+id/dayInfo"/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="50dp"
+			android:textSize="22sp"
+			android:text="Ночь"/>
+	<ImageView
+			android:layout_width="50dp"
+			android:layout_height="50dp"
+			android:id="@+id/nightPic"/>
+	<TextView
+			android:layout_width="150dp"
+			android:layout_height="wrap_content"
+			android:text="night Info"
+			android:gravity="center_horizontal"
+			android:id="@+id/nightInfo"/>
+</LinearLayout >

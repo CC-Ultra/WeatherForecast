@@ -274,7 +274,7 @@ public class Forecast10
 			this.forecast10day = forecast10day;
 			}
 		}
-	private class Forecast
+	public class Forecast
 		{
 		@SerializedName("txt_forecast")
 		@Expose
@@ -300,7 +300,7 @@ public class Forecast10
 			this.simpleforecast = simpleforecast;
 			}
 		}
-	private class Forecastday
+	public class Forecastday
 		{
 		@SerializedName("period")
 		@Expose
@@ -913,7 +913,7 @@ public class Forecast10
 			this.cm = cm;
 			}
 		}
-	private class TxtForecast
+	public class TxtForecast
 		{
 		@SerializedName("date")
 		@Expose
@@ -957,3 +957,12 @@ public class Forecast10
 		return forecast;
 		}
 	}
+
+
+
+
+
+
+
+
+

@@ -42,13 +42,11 @@ public class SearchActivity extends AppCompatActivity
 			if(response.body()!=null)
 				{
 				for(CityList.RESULT result : response.body().getRESULTS() )
-					{
-					LatLng latLng=new LatLng(Float.parseFloat(result.getLat() ),Float.parseFloat(result.getLon() ) );
-					map.put(result.getName(),latLng);
-					Log.d(O.TAG,"onResponse: "+ latLng.lat);
-					Log.d(O.TAG,"onResponse: "+ latLng.lng);
-					Log.d(O.TAG,"onResponse: "+ result.getName() );
-					}
+					if(result!=null && result.getLat()!=null && result.getLon()!=null)
+						{
+						LatLng latLng=new LatLng(Double.parseDouble(result.getLat() ),Double.parseDouble(result.getLon() ) );
+						map.put(result.getName(),latLng);
+						}
 				adapter.clear();
 				adapter.addAll(map.keySet() );
 				}
@@ -69,7 +67,6 @@ public class SearchActivity extends AppCompatActivity
 		public void afterTextChanged(Editable s)
 			{
 			String str= s.toString();
-			Log.d(O.TAG,"afterTextChanged: "+ str);
 			App.getAutocompleteApi().getCities(str).enqueue(new CitiesCallback() );
 			}
 		}
@@ -79,12 +76,13 @@ public class SearchActivity extends AppCompatActivity
 		public void onItemClick(AdapterView<?> parent,View view,int position,long id)
 			{
 			Intent jumper= new Intent(SearchActivity.this,LocalActivity.class);
-			jumper.putExtra(O.mapKeys.extra.LAT,map.get(adapter.getItem(position) ).lat);
-			jumper.putExtra(O.mapKeys.extra.LNG,map.get(adapter.getItem(position) ).lng);
-			jumper.putExtra(O.mapKeys.extra.CITY,adapter.getItem(position) );
-			Log.d(O.TAG,"onItemClick: "+ map.get(adapter.getItem(position) ).lat);
-			Log.d(O.TAG,"onItemClick: "+ map.get(adapter.getItem(position) ).lng);
-			Log.d(O.TAG,"onItemClick: "+ adapter.getItem(position) );
+			String city= adapter.getItem(position);
+			jumper.putExtra(O.mapKeys.extra.LAT,map.get(city).lat);
+			jumper.putExtra(O.mapKeys.extra.LNG,map.get(city).lng);
+			jumper.putExtra(O.mapKeys.extra.CITY,city.substring(0,city.indexOf(",") ) );
+			Log.d(O.TAG,"onItemClick: "+ map.get(city).lat);
+			Log.d(O.TAG,"onItemClick: "+ map.get(city).lng);
+			Log.d(O.TAG,"onItemClick: "+city.substring(0,city.indexOf(",") ) );
 			startActivity(jumper);
 			}
 		}

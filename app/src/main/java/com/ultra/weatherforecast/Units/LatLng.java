@@ -9,11 +9,11 @@ package com.ultra.weatherforecast.Units;
 
 public class LatLng
 	{
-	public LatLng(float _lat,float _lng)
+	public LatLng(double _lat,double _lng)
 		{
 		lat=_lat;
 		lng=_lng;
 		}
 
-	public float lat,lng;
+	public double lat,lng;
 	}
